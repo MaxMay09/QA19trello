@@ -53,4 +53,10 @@ public class UserHelper extends HelperBase {
         click(By.cssSelector(".hiRkezEUBG7ve6 uXhW3KBBr1jUsJ"));
         new Actions(wd).moveToElement(el).click(el).sendKeys("name" + Keys.ENTER).build().perform();
     }
+    public void login(){
+        openLoginForm();
+        fillLoginForm(new User().withEmail("maxmayzel@gmail.com").withPassword("Rfrnec7_*"));
+        submitLogIn();
+        pause(3000);
+    }
 }
